@@ -3,7 +3,7 @@ from tokenizer import tokenizer
 
 def init():
     fetchData();
-    getModel();
+ #   getModel();
     tokenizer();
 
 #init();
@@ -52,8 +52,8 @@ def getWordpieceModel():
     )
     wordpiece_tokenizer.save_model("./data/model/nsmc/wordpiece")
 
-#getByteLevelBPEModel()
-#getWordpieceModel()
+# getByteLevelBPEModel()
+# getWordpieceModel()
 
 """GPT 토크나이저로 토큰화하기"""
 from transformers import GPT2Tokenizer
@@ -72,4 +72,4 @@ batch_inputs = tokenizer_gpt(
     max_length= 12, # 문장의 토큰 기준 최대 길이
     truncation=True
 )
-batch_inputs
+print(batch_inputs)                         

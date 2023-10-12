@@ -11,7 +11,10 @@ def fetchData():
     )
 
 def getModel():
+
     model = BertForSequenceClassification.from_pretrained(
-    args.pretrained_model_name,
-    config=pretrained_model_config,
-)
+        args.pretrained_model_name,
+        config=pretrained_model_config,
+    )
+
+getModel();
